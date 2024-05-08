@@ -13,12 +13,12 @@ document.getElementById("closePopup").addEventListener("click", function () {
 var alreadySelectedText = "";
 var selectedText = "";
 
-async function fetchDefinition(text) {
+async function fetchDefinition(text, apiKey) {
     try {
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
-                'Authorization': 'Bearer OPENAI_API_KEY', // replace OPENAI_API_KEY with actual OpenAI API key
+                'Authorization': 'Bearer ' + apiKey,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
@@ -81,33 +81,39 @@ window.addEventListener("scroll", function () {
 });
 
 function createDefineButton(x, y, text) {
-  let existingButton = document.getElementById("textSelectorButton");
-  if (existingButton) existingButton.remove();
+    let existingButton = document.getElementById("textSelectorButton");
+    if (existingButton) existingButton.remove();
 
-  let button = document.createElement("button");
-  button.textContent = "Define";
-  button.id = "textSelectorButton";
-  button.style.position = "absolute";
-  button.style.zIndex = "1000";
-  button.style.opacity = "1";
-  button.style.background = "white";
-  button.style.border = "1px solid black";
+    let button = document.createElement("button");
+    button.textContent = "Define";
+    button.id = "textSelectorButton";
+    button.style.position = "absolute";
+    button.style.zIndex = "1000";
+    button.style.opacity = "1";
+    button.style.background = "white";
+    button.style.border = "1px solid black";
 
-  button.addEventListener("click", function () {
-    // console.log("BUTTON CLICKED: DEFINE");
-    fetchDefinition(text)
-        .then((definition) => {
-            document.getElementById("popupContent").textContent = definition;
-            document.getElementById("myCustomPopup").style.display = "block";
-            positionPopupUnderButton(button);
-        })
-        .catch((error) => {
-            document.getElementById("popupContent").textContent =
-            "Failed to fetch definition: " + error.message;
-            document.getElementById("myCustomPopup").style.display = "block";
-            positionPopupUnderButton(button);
+    button.addEventListener("click", function () {
+        // retrieve OPENAI_API_KEY from storage
+        chrome.storage.local.get(['apiKey'], function(result) {
+            if (result.apiKey) {
+                fetchDefinition(selectedText, result.apiKey)
+                    .then((definition) => {
+                        document.getElementById("popupContent").textContent = definition;
+                        document.getElementById("myCustomPopup").style.display = "block";
+                        positionPopupUnderButton(button);
+                    })
+                    .catch((error) => {
+                        document.getElementById("popupContent").textContent = "Failed to fetch definition: " + error.message;
+                        document.getElementById("myCustomPopup").style.display = "block";
+                        positionPopupUnderButton(button);
+                    });
+            } else {
+                console.error('API key is not set. Please set it in the extension options.');
+            }
         });
     });
+
 
     document.body.appendChild(button);
     positionButtonNearSelection(button);
