@@ -109,7 +109,7 @@ function createDefineButton(x, y, text) {
                         positionPopupUnderButton(button);
                     });
             } else {
-                console.error('API key is not set. Please set it in the extension options.');
+                alert('ERROR: OPENAI API KEY IS NOT SET.\n\n1. Right-click on the extension icon in the top right of your browser.\n2. Click on "Options".\n3. Enter your API key in the text box and click "Save".\n4. Refresh this page.');
             }
         });
     });
