@@ -1,0 +1,38 @@
+#myCustomPopup {
+  display: none; 
+  flex-direction: column; 
+  position: fixed; 
+  width: 500px; 
+  background-color: rgb(128,128,128); 
+  border: solid black; 
+  border-radius: 7px;
+  z-index: 1000; 
+  padding: 20px; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+#popupContent {
+  flex-grow: 1; 
+  overflow-y: auto; 
+  color: black;
+}
+
+#closePopup {
+  position: absolute;
+  margin: 7px;
+  top: 0;
+  right: 0;
+  align-self: center; 
+  color: yellow;
+}
+
+#textSelectorButton {
+  position: absolute;
+  z-Index: 1000;
+  opacity: 1;
+  background: white;
+  border: 2px solid black;
+  border-radius: 3px;
+  color: black;
+  font-weight: bold;
+}
