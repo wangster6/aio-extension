@@ -1,4 +1,4 @@
-# ai-extension
+# aio-extension
 
 ## How To Use
 1. Open Chrome and navigate to chrome://extensions/.
