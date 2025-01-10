@@ -55,6 +55,5 @@ For questions or feedback, please contact me on [my profile](https://github.com/
 <br><br>
 
 ## Contributors
-<a href="https://github.com/wangster6/raydsa/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=wangster6/raydsa" />
-</a>
+<a href="https://github.com/wangster6/aio-extension/graphs/contributors"><img src="https://contrib.rocks/image?repo=wangster6/aio-extension" /></a>
+<a href="https://github.com/Andydchoo/aio-extension/graphs/contributors"><img src="https://contrib.rocks/image?repo=wangster6/aio-extension" /></a>
