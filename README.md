@@ -1,6 +1,6 @@
 # Explain-It Chrome Extension
 This Google Chrome extension allows users to highlight text on any webpage and receive an explanation of the selected text through the OpenAI API. When users highlight text, a button appears next to it. Clicking the button sends the highlighted text to the API, retrieves an explanation, and displays it in a pop-up window. The extension is designed to improve usability and efficiency in understanding complex or unfamiliar terms or phrases. This project uses HTML and CSS for the front-end, JavaScript for functionality, the OpenAI API for text processing, and the Google Chrome Extensions API for integration with the browser.
-<br>
+<br><br>
 
 ## Features
 - **Text Highlighting:** Users can highlight text on any webpage, triggering the extension's functionality.
