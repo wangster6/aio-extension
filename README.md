@@ -16,6 +16,13 @@ This Google Chrome extension allows users to highlight text on any webpage and r
 - OpenAI API Key (get it [here](https://openai.com/api/))
 <br>
 
+## Technologies Used
+- **HTML and CSS:** Used for building and styling the front-end interface, including the pop-up and options pages.
+- **JavaScript:** Handles the core logic of the extension, such as detecting highlighted text, managing API calls, and displaying results in the pop-up.
+- **OpenAI API:** Processes the highlighted text and generates explanations for the user.
+- **Google Chrome Extensions API:** Facilitates interaction with the Chrome browser, enabling extension-specific functionalities such as storing user data, managing background scripts, and displaying pop-ups.
+<br>
+
 ## Getting Started
 1. Clone this repository to your local machine.
 2. Open Chrome and navigate to `chrome://extensions/`.
@@ -31,29 +38,23 @@ This Google Chrome extension allows users to highlight text on any webpage and r
 3. View the explanation in the pop-up window that appears.
 <br>
 
-## Technologies Used
-- **HTML, CSS, JavaScript:** For building the extension's front-end interface and functionality.
-- **OpenAI API:** For generating explanations of the highlighted text.
-- **Google Chrome Extensions API:** For interacting with the Chrome browser.
-<br>
-
 ## File Descriptions
-- **background.js:** Manages background events and communication between components. Opens the pop-up when triggered. [View Details](background.js)&#8203;:contentReference[oaicite:0]{index=0}
-- **content_script.js:** Handles text highlighting, button creation, API calls, and dynamic positioning of the button and pop-up. [View Details](content_script.js)&#8203;:contentReference[oaicite:1]{index=1}
-- **options.html & options.js:** Provides a settings page for users to securely store their OpenAI API key. [View Details](options.html, options.js)&#8203;:contentReference[oaicite:2]{index=2}&#8203;:contentReference[oaicite:3]{index=3}
-- **popup.html & popup.js:** Displays the explanation in a pop-up window. [View Details](popup.html, popup.js)&#8203;:contentReference[oaicite:4]{index=4}&#8203;:contentReference[oaicite:5]{index=5}
-- **styles.css:** Styles the pop-up window and other UI elements for a user-friendly experience. [View Details](styles.css)&#8203;:contentReference[oaicite:6]{index=6}
+- **background.js:** Manages background events and communication between components. Opens the pop-up when triggered.
+- **content_script.js:** Handles text highlighting, button creation, API calls, and dynamic positioning of the button and pop-up.
+- **options.html & options.js:** Provides a settings page for users to securely store their OpenAI API key.
+- **popup.html & popup.js:** Displays the explanation in a pop-up window.
+- **styles.css:** Styles the pop-up window and other UI elements for a user-friendly experience.
 <br>
 
 ## Contributing
 Contributions to this project are welcome! Feel free to submit issues or pull requests.
-<br>
+<br><br>
 
 ## Contact
-For questions or feedback, please contact me on [GitHub](https://github.com/wangster6).
-<br>
+For questions or feedback, please contact me on [my profile](https://github.com/wangster6).
+<br><br>
 
 ## Contributors
-<a href="https://github.com/wangster6/ai-extension/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=wangster6/ai-extension" />
+<a href="https://github.com/wangster6/raydsa/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wangster6/raydsa" />
 </a>
